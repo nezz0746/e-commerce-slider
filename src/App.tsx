@@ -41,8 +41,8 @@ function App(): JSX.Element {
   );
 
   return (
-    <div className="sm:p-5 bg-gray-100 flex flex-col justify-center items-center text-center h-screen">
-      <div className="bg-white shadow-xl rounded-lg inline-flex">
+    <div className="sm:p-5 bg-gray-300 flex flex-col justify-center items-center text-center h-screen">
+      <div className="bg-white shadow-2xl rounded-lg inline-flex">
         <div className=" overflow-x-hidden" style={{ width: imageWidth, padding: cardPadding }}>
           <div className="absolute flex flex-row" style={{ width: imageDivWidth, zIndex: 2, height: imageDivWidth }}>
             <div
@@ -87,7 +87,7 @@ function App(): JSX.Element {
             {images.map((url, index) => (
               <img
                 src={url}
-                key={index}
+                key={url + index}
                 alt="blue-hoodie"
                 className={classNames({
                   'cursor-pointer': true,
